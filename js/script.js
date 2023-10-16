@@ -61,6 +61,7 @@ function listarPessoas() {
     let template = ``;
 
     arrPessoa.forEach(pessoa => {
+        //cria uma string que representa o HTML que sera inserido no body
         template += `
         <tr>
             <td>${pessoa.nome}</td>
@@ -69,8 +70,9 @@ function listarPessoas() {
             <td>${pessoa.imc}</td>
             <td>${pessoa.situacao}</td>
         </tr>
-        `
+        `;
 
+        //insere a string completa no HTML
         document.getElementById("cadastro").innerHTML = template;
     });
 }
